@@ -1,6 +1,6 @@
 import React from "react";
 import { useHistory } from "react-router";
-import returnImg from "../../assets/img/return.png";
+import returnImg from "../assets/img/return.png";
 
 const ReturnButton = () => {
   const history = useHistory();

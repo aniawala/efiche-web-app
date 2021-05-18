@@ -3,8 +3,8 @@ export const getUser = () => {
   return user ? JSON.parse(user) : null;
 };
 
-export const isLoggedIn = () => {
-  return localStorage.getItem("user") ? true : false;
+export const isAuth = () => {
+  return localStorage.getItem("token") ? true : false;
 };
 
 export const setUserSession = (token, user) => {

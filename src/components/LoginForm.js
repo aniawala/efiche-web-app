@@ -20,7 +20,10 @@ const LoginForm = () => {
       history.push("/dashboard");
     } catch (err) {
       if (err.response.status === 400) setError(err.response.data.message);
-      else setError("Something went wrong. Please try again");
+      else {
+        console.log(process.env.REACT_APP_API_URL);
+        setError("Something went wrong. Please try again");
+      }
     }
   };
   return (

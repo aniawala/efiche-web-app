@@ -1,5 +1,5 @@
 import React from "react";
-import ReturnButton from "../components/utils/ReturnButton";
+import ReturnButton from "../components/ReturnButton";
 import LoginForm from "../components/LoginForm";
 
 const Login = () => {

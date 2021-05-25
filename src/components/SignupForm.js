@@ -17,6 +17,7 @@ const SignupForm = () => {
         email,
         password,
       });
+      setError(null);
       setMessage("Your account has been successfully created");
     } catch (err) {
       if (err.response.status === 409 || err.response.status === 422)
@@ -26,8 +27,8 @@ const SignupForm = () => {
   };
 
   return (
-    <div>
-      <form onSubmit={handleSignup}>
+    <div className="signup-view">
+      <form className="signup-form" onSubmit={handleSignup}>
         <input
           value={username}
           onChange={(e) => setUsername(e.target.value)}
@@ -48,9 +49,9 @@ const SignupForm = () => {
         />
         <button type="submit">SIGN UP</button>
       </form>
-      <p>{error}</p>
-      <p>{message}</p>
-      <p>
+      <p className="signup-error">{error}</p>
+      <p className="signup-message">{message}</p>
+      <p className="signup-nav">
         Already have an account? <Link to="/login">Log in!</Link>
       </p>
     </div>

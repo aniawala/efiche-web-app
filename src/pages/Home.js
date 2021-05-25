@@ -11,9 +11,13 @@ const Home = () => {
   };
   return (
     <div className="home">
-      <h1>Welcome to eFiche!</h1>
-      <button onClick={redirectLogin}>Log in</button>
-      <button onClick={redirectSignup}>Sign up</button>
+      <p className="home-header">Welcome to eFiche!</p>
+      <button onClick={redirectLogin} className="login-button">
+        Log in
+      </button>
+      <button onClick={redirectSignup} className="signup-button">
+        Sign up
+      </button>
     </div>
   );
 };

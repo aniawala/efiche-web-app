@@ -27,8 +27,8 @@ const LoginForm = () => {
     }
   };
   return (
-    <div>
-      <form onSubmit={handleLogin}>
+    <div className="login-view">
+      <form className="login-form" onSubmit={handleLogin}>
         <input
           value={username}
           onChange={(e) => setUsername(e.target.value)}
@@ -43,8 +43,8 @@ const LoginForm = () => {
         />
         <button type="submit">LOG IN</button>
       </form>
-      <p>{error}</p>
-      <p>
+      <p className="login-error">{error}</p>
+      <p className="login-nav">
         Don't have account? <Link to="/signup">Sign up!</Link>
       </p>
     </div>

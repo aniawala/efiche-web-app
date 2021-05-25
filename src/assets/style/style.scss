@@ -1,3 +1,22 @@
-@import "base/reset";
 @import "utils/variables";
+@import "utils/functions";
+@import "utils/mixins";
+@import "utils/placeholders";
+
+@import "base/reset";
+@import "base/base";
+@import "base/colors";
 @import "base/typography";
+
+@import "layout/button";
+@import "layout/grid";
+@import "layout/form";
+@import "layout/header";
+@import "layout/panel";
+// @import "components/"
+@import "pages/home";
+@import "pages/login";
+@import "pages/signup";
+@import "pages/dashboard";
+
+// @import "themes/"

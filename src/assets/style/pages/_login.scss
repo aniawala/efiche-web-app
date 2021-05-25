@@ -1,0 +1,28 @@
+.login {
+  @extend %main-box-size;
+  @extend %center-items;
+  background-color: pink;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  .login-header {
+    @include grid-position(1, 2, 1, 2);
+  }
+  .login-view {
+    @extend %center-items;
+    @include grid-position(2, 3, 1, 2);
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-rows: repeat(6, 1fr);
+    .login-form {
+      @extend .form;
+      @include grid-position(1, 2, 3, 5);
+    }
+    .login-error {
+      @include grid-position(1, 2, 5, 6);
+    }
+    .login-nav {
+      @include grid-position(1, 2, 6, 7);
+    }
+  }
+}

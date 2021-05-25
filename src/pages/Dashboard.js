@@ -1,20 +1,16 @@
 import React from "react";
-import { useHistory } from "react-router-dom";
-import logoutImg from "../assets/img/logout.png";
-import { getUser, removeUserSession } from "../components/utils/Common";
+import SideNav from "../components/SideNav";
+import Menu from "../components/Menu";
+import TopNav from "../components/TopNav";
+import Panel from "../components/Panel";
 
 const Dashboard = () => {
-  const history = useHistory();
-  const user = getUser();
-
-  const handleLogout = () => {
-    removeUserSession();
-    history.push("/login");
-  };
   return (
     <div className="dashboard">
-      <p>Hello {user.name}!</p>
-      <img src={logoutImg} alt="Logout" onClick={handleLogout} />
+      <SideNav />
+      <Menu />
+      <TopNav />
+      <Panel />
     </div>
   );
 };

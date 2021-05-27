@@ -6,8 +6,8 @@ const SignupForm = () => {
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [error, setError] = useState(null);
-  const [message, setMessage] = useState("");
+  const [errorMessage, setErrorMessage] = useState(null);
+  const [successMessage, setSuccessMessage] = useState("");
 
   const handleSignup = async (e) => {
     e.preventDefault();
@@ -17,17 +17,17 @@ const SignupForm = () => {
         email,
         password,
       });
-      setError(null);
-      setMessage("Your account has been successfully created");
+      setErrorMessage(null);
+      setSuccessMessage("Your account has been successfully created");
     } catch (err) {
       if (err.response.status === 409 || err.response.status === 422)
-        setError(err.response.data.message);
-      else setError("Something went wrong. Please try again");
+        setErrorMessage(err.response.data.message);
+      else setErrorMessage("Something went wrong. Please try again");
     }
   };
 
   return (
-    <div className="signup-view">
+    <div className="signup-panel">
       <form className="signup-form" onSubmit={handleSignup}>
         <input
           value={username}
@@ -49,10 +49,13 @@ const SignupForm = () => {
         />
         <button type="submit">SIGN UP</button>
       </form>
-      <p className="signup-error">{error}</p>
-      <p className="signup-message">{message}</p>
+      <p className="signup-error-msg">{errorMessage}</p>
+      <p className="signup-success-msg">{successMessage}</p>
       <p className="signup-nav">
-        Already have an account? <Link to="/login">Log in!</Link>
+        Already have an account?{" "}
+        <Link to="/login" className="link">
+          Log in!
+        </Link>
       </p>
     </div>
   );

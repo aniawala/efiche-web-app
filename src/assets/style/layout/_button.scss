@@ -1,0 +1,23 @@
+button {
+  border: none;
+  border-radius: 2vh;
+  height: 4vh;
+  width: 8vw;
+}
+
+.dark-button {
+  background-color: $c1-light;
+  color: $base-light;
+}
+
+.light-button {
+  background-color: $c2-light;
+  color: $c1-medium;
+}
+
+.login-button {
+  @extend .dark-button;
+}
+.signup-button {
+  @extend .dark-button;
+}

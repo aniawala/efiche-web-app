@@ -7,7 +7,7 @@ const LoginForm = () => {
   const history = useHistory();
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-  const [error, setError] = useState(null);
+  const [errorMessage, setErrorMessage] = useState(null);
 
   const handleLogin = async (e) => {
     e.preventDefault();
@@ -19,15 +19,16 @@ const LoginForm = () => {
       setUserSession(response.data.accessToken, response.data.user);
       history.push("/dashboard");
     } catch (err) {
-      if (err.response.status === 400) setError(err.response.data.message);
+      if (err.response.status === 400)
+        setErrorMessage(err.response.data.message);
       else {
         console.log(process.env.REACT_APP_API_URL);
-        setError("Something went wrong. Please try again");
+        setErrorMessage("Something went wrong. Please try again");
       }
     }
   };
   return (
-    <div className="login-view">
+    <div className="login-panel">
       <form className="login-form" onSubmit={handleLogin}>
         <input
           value={username}
@@ -43,9 +44,12 @@ const LoginForm = () => {
         />
         <button type="submit">LOG IN</button>
       </form>
-      <p className="login-error">{error}</p>
+      <p className="login-error-msg">{errorMessage}</p>
       <p className="login-nav">
-        Don't have account? <Link to="/signup">Sign up!</Link>
+        Don't have account?{" "}
+        <Link to="/signup" className="link">
+          Sign up!
+        </Link>
       </p>
     </div>
   );

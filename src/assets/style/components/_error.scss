@@ -1,0 +1,8 @@
+.error-msg {
+  color: $error;
+}
+
+.login-error-msg,
+.signup-error-msg {
+  @extend .error-msg;
+}

@@ -1,0 +1,17 @@
+.side-nav {
+  display: grid;
+  justify-items: center;
+  background-color: $c1-dark;
+}
+
+.top-nav {
+  display: grid;
+  align-items: center;
+  justify-items: end;
+  background-color: $c1-dark;
+  img {
+    height: 4.5vh;
+    width: auto;
+    padding-right: 1vw;
+  }
+}

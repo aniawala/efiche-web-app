@@ -1,0 +1,19 @@
+.large-header {
+  color: $c2-medium;
+}
+
+.medium-header {
+  color: $c2-medium;
+}
+
+.home-header {
+  @extend .large-header;
+}
+
+.login-header {
+  @extend .medium-header;
+}
+
+.signup-header {
+  @extend .medium-header;
+}

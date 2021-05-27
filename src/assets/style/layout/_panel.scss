@@ -1,0 +1,24 @@
+.panel {
+  @extend %center-items;
+  height: 100%;
+  width: 100%;
+}
+
+.public-page-main-panel {
+  @extend %center-items;
+  height: 60%;
+  width: 45%;
+  border-radius: 6vh;
+}
+
+.login-panel {
+  @extend .panel;
+}
+
+.signup-panel {
+  @extend .panel;
+}
+
+.dashboard-panel {
+  background-color: $c1-medium;
+}

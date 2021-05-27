@@ -4,6 +4,8 @@ body {
   #app {
     @extend %flex-center;
     height: 100%;
+    background-color: $c1-dark;
+    color: $base-light;
   }
 }
 

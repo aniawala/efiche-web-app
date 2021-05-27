@@ -1,32 +1,4 @@
 .dashboard {
   height: 100%;
   width: 100%;
-  display: grid;
-  grid-template-columns: 0.1fr 0.5fr 2fr;
-  grid-template-rows: 0.2fr 1.5fr;
-  .side-nav {
-    @include grid-position(1, 2, 1, 3);
-    display: grid;
-    justify-items: center;
-    background-color: aquamarine;
-  }
-  .dashboard-menu {
-    @include grid-position(2, 3, 1, 3);
-    background-color: pink;
-  }
-  .top-nav {
-    @include grid-position(3, 4, 1, 2);
-    display: grid;
-    align-items: center;
-    justify-items: end;
-    background-color: rgb(123, 218, 255);
-    img {
-      height: 30px;
-      width: auto;
-    }
-  }
-  .dashboard-panel {
-    @include grid-position(3, 4, 2, 3);
-    background-color: rgb(255, 255, 162);
-  }
 }
